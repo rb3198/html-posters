@@ -1,0 +1,187 @@
+@page {
+    size: A3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter Tight";
+}
+
+body {
+    margin: 0;
+    padding: 5vh 5vh;
+    background-color: beige;
+}
+
+#colors-logo-container {
+    height: 4vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5vh;
+}
+
+#colors-container {
+    display: flex;
+}
+
+.color {
+    width: 7.5vw;
+    height: 1vh;
+}
+
+#year-logo-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+#year {
+    transform: scaleY(1.25);
+    font-size: 3.5vw;
+}
+
+#logo {
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    object-position: center;
+    margin-left: 5vw;
+}
+
+#main {
+    height: 77.5vh;
+    position: relative;
+    width: 100%;
+    color: beige;
+}
+
+#main-title {
+    background-color: #181818;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: end;
+    padding-top: 1vh;
+    padding-right: 2vw;
+}
+
+#main-stage {
+    height: 25%;
+    background-color: orangered;
+    opacity: .5;
+}
+
+#artist {
+    font-size: 15vw;
+    line-height: 90%;
+    margin: 2vh 0;
+    z-index: 10;
+}
+
+#album {
+    font-size: 6vw;
+    transform: scaleY(1.1);
+    line-height: 90%;
+    margin: 2vh 0;
+    z-index: 10;
+}
+
+#live-in-la {
+    color: #70ab8b;
+    font-size: 4vw;
+    z-index: 10;
+}
+
+#footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2.5vh;
+    height: 5vh;
+    width: 100%;
+    font-size: 2vw;
+}
+
+#spotify-code {
+    height: 100%;
+}
+
+#moon {
+    background-color: beige;
+    height: 5vh;
+    width: 5vh;
+    border-radius: 50%;
+    position: absolute;
+    top: 22.5%;
+    left: 10%;
+}
+
+#spotlight-ray {
+    height: 42vh;
+    width: 40vh;
+    position: absolute;
+    background-image: linear-gradient(120deg, beige, rgba(245, 245, 220, 0.25));
+    z-index: 5;
+    top: calc(22.5% + 5vh + 1vh);
+    left: calc(10% + 2.5vh);
+}
+
+#spotlight {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 7vh;
+    transform: translateY(50%);
+    background: beige;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+
+#spotlight-ray-overlay {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    height: 0;
+    width: 0;
+    border-top: 42vh solid #181818;
+    border-left: 40vh solid transparent;
+}
+
+#spotlight-ray-overlay div {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-left: 6.25vh solid transparent;
+    border-top: 6.25vh solid orangered;
+    opacity: 0.5;
+    background-blend-mode: screen;
+}
+
+#john {
+    position: absolute;
+    z-index: 10;
+    top: 52%;
+    transform: scale(0.9);
+    filter: brightness(.85) opacity(.95);
+    left: 25%;
+}
+
+#shadow {
+    position: absolute;
+    top: 52%;
+    left: 25%;
+    filter: brightness(0.1) opacity(0.8) drop-shadow(1px 5px 5px black) blur(2px);
+    transform: translate(49%, 56.5%) rotate(110deg) scale(.5, .8);
+    z-index: 5;
+}
+
+@media print {
+    @page {
+        size: A3;
+    }
+}
