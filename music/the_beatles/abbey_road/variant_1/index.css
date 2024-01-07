@@ -1,0 +1,112 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@page {
+    size: A3;
+}
+
+@media print {
+    @page {
+        size: A3;
+    }
+}
+
+body {
+    background-color: #181818;
+    padding: 4vh 4vh;
+    color: #eee;
+}
+
+#cover {
+    width: 100%;
+    height: 65vh;
+    filter: contrast(1.2) blur(.5px) saturate(.8);
+}
+
+#cover::after {
+    box-shadow: inset 2px 0px 142px 75px #181818;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+#cover img {
+    height: 100%;
+    width: 100%;
+    filter: contrast(1.2) blur(.5px) saturate(.8);
+}
+
+#info {
+    display: flex;
+    width: 100%;
+    margin-top: 2.5vh;
+    height: 24.5vh;
+}
+
+#info > div {
+    display: flex;
+    width: 50%;
+}
+
+#track-listing ol {
+    list-style-position: inside;
+    font-family: "League Gothic";
+    text-transform: uppercase;
+    font-size: 2vw;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+#track-listing ol li {
+    margin-bottom: .5vh;
+}
+
+.side_no {
+    font-weight: bold;
+    margin-bottom: .5vh;
+    font-size: 2vh;
+}
+
+#meta {
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 1.8vh;
+    font-family: "League Gothic";
+    text-transform: uppercase;
+}
+
+#album-length {
+    font-size: 3vh;
+}
+
+#meta p {
+    margin-top: .5vh;
+}
+
+#pallette {
+    display: flex;
+    height: .75vh;
+    margin-bottom: 1vh;
+}
+
+.pallette-color {
+    height: 100%;
+    width: 7.5vw;
+}
+
+#artist {
+    text-transform: none;
+    font-size: 3vh;
+    transform: scaleY(1.1);
+    font-family: "Inter Tight";
+}
+
+#album {
+    font-size: 4vh;
+    font-family: "Inter Tight";
+}
